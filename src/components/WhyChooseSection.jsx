@@ -11,9 +11,7 @@ const WhyChooseSection = () => {
     <section className="py-16 px-6 md:px-20 relative">
       {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold">
-          Why Choose Our Nasal Clip?
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Why Choose Our Nasal Clip?</h2>
         <p className="text-gray-500 mt-2 max-w-2xl mx-auto">
           Our nasal clip provides a simple, effective solution for snoring,
           congestion, and improved airflow during activities, offering comfort
@@ -28,23 +26,19 @@ const WhyChooseSection = () => {
           spaceBetween={20}
           slidesPerView={1}
           autoplay={{ delay: 3000 }}
-          navigation={{
-            nextEl: ".next-slide",
-            prevEl: ".prev-slide",
-          }}
+          navigation={{ nextEl: ".next-slide", prevEl: ".prev-slide" }}
           className="w-full"
         >
           <SwiperSlide>
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="relative w-full md:w-1/2">
+            <div className="flex flex-col md:flex-row items-center gap-6 h-[400px] md:h-[450px]">
+              <div className="relative w-full md:w-1/2 h-full flex items-center">
                 <img
                   src="src/assets/images/whychoose/womansleeping.png"
                   alt="Sleeping Woman"
-                  className="rounded-lg shadow-lg w-full"
+                  className="rounded-lg shadow-lg w-full h-full object-cover"
                 />
-                
               </div>
-              <div className="w-full md:w-1/2">
+              <div className="w-full md:w-1/2 h-full flex flex-col justify-center">
                 <h3 className="text-2xl font-bold">Reduces Snoring</h3>
                 <p className="text-gray-500 mt-2">
                   Our nasal clip is scientifically designed to fit seamlessly
@@ -54,16 +48,15 @@ const WhyChooseSection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="relative w-full md:w-1/2">
-              <img
+            <div className="flex flex-col md:flex-row items-center gap-6 h-[400px] md:h-[450px]">
+              <div className="relative w-full md:w-1/2 h-full flex items-center">
+                <img
                   src="src/assets/images/whychoose/mansleepping.png"
                   alt="Man Breathing"
-                  className="rounded-lg shadow-lg absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2 md:w-3/5"
+                  className="rounded-lg shadow-lg w-full h-full object-cover"
                 />
-                
               </div>
-              <div className="w-full md:w-1/2">
+              <div className="w-full md:w-1/2 h-full flex flex-col justify-center">
                 <h3 className="text-2xl font-bold">Scientifically Proven</h3>
                 <p className="text-gray-500 mt-2">
                   Trusted by professionals to improve airflow and reduce
@@ -73,12 +66,10 @@ const WhyChooseSection = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-
-        {/* Navigation Buttons for Image Slider */}
-        <button className="prev-slide absolute left-0 md:-left-12 top-1/2 transform -translate-y-1/2 bg-white border p-3 rounded-full shadow-md">
+        <button className="prev-slide absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border p-3 rounded-full shadow-md z-10">
           <FiArrowLeft className="text-gray-600 text-xl" />
         </button>
-        <button className="next-slide absolute right-0 md:-right-12 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-3 rounded-full shadow-md">
+        <button className="next-slide absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-3 rounded-full shadow-md z-10">
           <FiArrowRight className="text-xl" />
         </button>
       </div>
@@ -86,17 +77,13 @@ const WhyChooseSection = () => {
       {/* Testimonial Slider */}
       <div className="mt-16 text-center">
         <h2 className="text-3xl font-bold">Loved by Thousands</h2>
-
         <div className="relative">
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             autoplay={{ delay: 4000 }}
-            navigation={{
-              nextEl: ".next-testimonial",
-              prevEl: ".prev-testimonial",
-            }}
+            navigation={{ nextEl: ".next-testimonial", prevEl: ".prev-testimonial" }}
             className="w-full"
           >
             <SwiperSlide>
@@ -121,7 +108,6 @@ const WhyChooseSection = () => {
                 </div>
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="bg-white shadow-lg rounded-xl p-6 max-w-lg mx-auto">
                 <p className="text-gray-600">
@@ -145,14 +131,6 @@ const WhyChooseSection = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-
-          {/* Navigation Buttons for Testimonials */}
-          <button className="prev-testimonial absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border p-2 rounded-full shadow-md">
-            <FiArrowLeft className="text-gray-600 text-lg" />
-          </button>
-          <button className="next-testimonial absolute right-4 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full shadow-md">
-            <FiArrowRight className="text-lg" />
-          </button>
         </div>
       </div>
     </section>

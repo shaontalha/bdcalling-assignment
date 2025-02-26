@@ -1,4 +1,5 @@
 import React from "react";
+import { MdOutlineVerifiedUser } from "react-icons/md";
 
 const feedbackData = [
   {
@@ -41,33 +42,26 @@ const CustomerFeedback = () => {
 
       {feedbackData.map((feedback) => (
         <div key={feedback.id} className="p-6">
-          {/* User Info */}
-          <div className="flex items-center space-x-3">
+          <div className="flex flex-wrap items-center space-x-3">
             <img
               src={feedback.profileImg}
               alt={feedback.name}
               className="w-12 h-12 rounded-full object-cover"
             />
-            <span className="text-lg font-semibold">{feedback.name}</span>
-            <span className="text-green-500 text-xl">✔️</span>
-            <span className="ml-auto bg-gray-200 text-gray-600 px-3 py-1 rounded-md text-sm">
+            <div className="flex items-center space-x-1">
+              <span className="text-lg font-semibold">{feedback.name}</span>
+              <span className="text-green-500 text-xl"><MdOutlineVerifiedUser /></span>
+            </div>
+            <span className="ml-auto bg-gray-200 text-gray-600 px-3 py-1 rounded-md text-sm whitespace-nowrap mt-2 md:mt-0">
               {feedback.date}
             </span>
           </div>
-
-          {/* Rating & Likes */}
           <div className="flex items-center space-x-2 mt-2">
-            <div className="flex text-yellow-500">
-              {"⭐".repeat(feedback.rating)}
-            </div>
+            <div className="flex text-yellow-500">{"⭐".repeat(feedback.rating)}</div>
             <span className="text-gray-400">|</span>
             <span className="text-gray-600">❤️ {feedback.likes.toLocaleString()}</span>
           </div>
-
-          {/* Review Text */}
           <p className="text-gray-700 mt-3">{feedback.text}</p>
-
-          {/* Review Image */}
           <div className="mt-4">
             <img
               src={feedback.reviewImg}
@@ -75,7 +69,6 @@ const CustomerFeedback = () => {
               className="w-36 h-36 rounded-lg object-cover"
             />
           </div>
-
           <hr className="border-gray-200 mt-6" />
         </div>
       ))}

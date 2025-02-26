@@ -20,7 +20,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-6">
+    <div id="faq" className="max-w-6xl mx-auto py-12 px-6">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Common Questions</h2>
 
         {/* FAQ Grid */}

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-    <div className='font-montserrat'>
+    <div className='font-primary'>
       <Navbar />
       <HeroSection />
       <ProductSection />

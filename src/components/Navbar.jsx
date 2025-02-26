@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,14 +9,14 @@ const Navbar = () => {
   };
 
   const navItems = [
-    "Home",
-    "Why It Works",
-    "Features",
-    "How It Works",
-    "Testimonials",
-    "Before and After",
-    "Science",
-    "FAQ",
+    { name: "Home", id: "home" },
+    { name: "Why It Works", id: "why-it-works" },
+    { name: "Features", id: "features" },
+    { name: "How It Works", id: "how-it-works" },
+    { name: "Testimonials", id: "testimonials" },
+    { name: "Before and After", id: "before-and-after" },
+    { name: "Science", id: "science" },
+    { name: "FAQ", id: "faq" },
   ];
 
   return (
@@ -38,29 +39,7 @@ const Navbar = () => {
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 focus:outline-none"
             >
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                )}
-              </svg>
+              {isOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
             </button>
           </div>
 
@@ -70,10 +49,10 @@ const Navbar = () => {
               {navItems.map((item, index) => (
                 <li key={index}>
                   <a
-                    href="#"
+                    href={`#${item.id}`}
                     className="text-gray-700 hover:text-orange-600 font-medium whitespace-nowrap"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -96,10 +75,10 @@ const Navbar = () => {
               {navItems.map((item, index) => (
                 <li key={index}>
                   <a
-                    href="#"
+                    href={`#${item.id}`}
                     className="block text-gray-700 hover:text-orange-600 font-medium"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}

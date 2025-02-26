@@ -1,8 +1,9 @@
 import React from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 const ScienceSection = () => {
   return (
-    <div className="bg-[#5B2C06] text-white py-12 px-6 md:px-16">
+    <div id="science" className="bg-[#5B2C06] text-white py-12 px-6 md:px-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
         {/* Left Section (Text) */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -13,13 +14,13 @@ const ScienceSection = () => {
           </p>
           <ul className="space-y-3">
             <li className="flex items-center">
-              <span className="text-orange-400 text-xl mr-2">✔️</span>
+              <span className="text-orange-400 text-xl mr-2"><FaCheckCircle /></span>
               <span className="font-semibold">
                 Clinical study shows 80% improvement in nasal airflow
               </span>
             </li>
             <li className="flex items-center">
-              <span className="text-orange-400 text-xl mr-2">✔️</span>
+              <span className="text-orange-400 text-xl mr-2"><FaCheckCircle /></span>
               <span className="font-semibold">
                 70% of users report reduced snoring after 2 weeks
               </span>

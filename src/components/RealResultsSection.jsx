@@ -2,11 +2,11 @@ import React from "react";
 
 const RealResultsSection = () => {
   return (
-    <section className="py-16 px-6 md:px-20">
+    <section id="before-and-after" className="py-16 px-6 md:px-20">
       {/* Heading */}
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold">Real Results You Can Feel</h2>
-        <p className="text-gray-500 mt-2 max-w-2xl mx-auto">
+        <p className=" mt-2 max-w-2xl mx-auto">
           See the difference our nasal clip can make for snoring and airflow.
         </p>
       </div>
@@ -52,10 +52,10 @@ const RealResultsSection = () => {
               ["Pulls Forward", "Nasal strips rely on the leverage of your nose bridge to widen the nose."]
             ].map(([title, desc], index) => (
               <div key={index} className="flex items-start gap-3">
-                <span className="text-gray-800 text-lg font-bold">❌</span>
+                <span className=" text-lg font-bold">❌</span>
                 <div>
                   <h4 className="font-bold">{title}</h4>
-                  <p className="text-gray-500 text-sm">{desc}</p>
+                  <p className=" text-sm">{desc}</p>
                 </div>
               </div>
             ))}

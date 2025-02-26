@@ -3,7 +3,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const PainPointsAndSolution = () => {
   return (
-    <section className="bg-[#693107] text-white py-16 px-6 md:px-20">
+    <section id="why-it-works" className="bg-[#693107] text-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Image */}

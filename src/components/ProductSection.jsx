@@ -6,7 +6,6 @@ import product2 from "../assets/images/productsection/product2.png";
 import product3 from "../assets/images/productsection/product3.png";
 import product4 from "../assets/images/productsection/product4.png";
 
-
 const ProductSection = () => {
   const [selectedImage, setSelectedImage] = useState(product1);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -16,10 +15,10 @@ const ProductSection = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-10">
+    <div id="features" className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-10">
       {/* Left Side - Product Image */}
       <div className="flex flex-col items-center">
-        <div className="border-2 border-blue-500 rounded-lg bg-orange-100 p-4">
+        <div className="border-2 rounded-lg bg-orange-100 p-4">
           <img
             src={selectedImage}
             alt="Product"
@@ -93,13 +92,13 @@ const ProductSection = () => {
           Add to Cart →
         </button>
 
-        {/* Payment Options */}
-        <div className="flex gap-4 mt-6">
-          <img src="src/assets/images/productsection/appplepay.png" alt="Apple Pay" className="h-10" />
-          <img src="src/assets/images/productsection/googlepay.png" alt="Google Pay" className="h-10" />
-          <img src="src/assets/images/productsection/mastercard.png" alt="MasterCard" className="h-10" />
-          <img src="src/assets/images/productsection/shopify.png" alt="Shop" className="h-10" />
-          <img src="src/assets/images/productsection/visa.png" alt="Visa" className="h-10" />
+        {/* Payment Options - Now Responsive */}
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <img src="src/assets/images/productsection/appplepay.png" alt="Apple Pay" className="h-10 w-auto" />
+          <img src="src/assets/images/productsection/googlepay.png" alt="Google Pay" className="h-10 w-auto" />
+          <img src="src/assets/images/productsection/mastercard.png" alt="MasterCard" className="h-10 w-auto" />
+          <img src="src/assets/images/productsection/shopify.png" alt="Shop" className="h-10 w-auto" />
+          <img src="src/assets/images/productsection/visa.png" alt="Visa" className="h-10 w-auto" />
         </div>
 
         {/* Dropdown Sections */}
